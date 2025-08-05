@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <style>
+        /* Include the CSS from the previous step and the new CSS above here */
+        /* For the div that acts as a slide */
+        .slide-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transition-property: opacity;
+            transition-duration: 1000ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            color: #333;
+        }
+
+        .slide-hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .slide-visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 4px 6px;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 1.5em;
+            border-radius: 5px;
+            user-select: none;
+        }
+
+        .carousel-nav-btn:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .carousel-nav-btn.prev {
+            left: 10px;
+        }
+
+        .carousel-nav-btn.next {
+            right: 10px;
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        .dot.active {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel-wrapper">
+        <div class="slides-container">
+            <div class="slide-container">
+                <img src="http://127.0.0.1:8000/static/images/banner-images/1.jpg" alt="">
+            </div>
+            <div class="slide-container">
+                <img src="http://127.0.0.1:8000/static/images/banner-images/2.jpg" alt="">
+            </div>
+            <div class="slide-container">
+                <img src="http://127.0.0.1:8000/static/images/banner-images/3.jpg" alt="">
+            </div>
+        </div>
+
+        <button class="carousel-nav-btn prev" id="prevBtn">&larr;</button>
+        <button class="carousel-nav-btn next" id="nextBtn">&rarr;</button>
+
+        <div class="carousel-dots" id="carouselDots">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide-container');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const carouselDotsContainer = document.getElementById('carouselDots');
+            let activeIndex = 0; // Start with the first slide
+
+            // Function to update slide visibility
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.remove('slide-hidden');
+                        slide.classList.add('slide-visible');
+                    } else {
+                        slide.classList.remove('slide-visible');
+                        slide.classList.add('slide-hidden');
+                    }
+                });
+                updateDots(index);
+            }
+
+            // Function to generate and update navigation dots
+            function createDots() {
+                carouselDotsContainer.innerHTML = ''; // Clear existing dots
+                slides.forEach((_, i) => {
+                    const dot = document.createElement('span');
+                    dot.classList.add('dot');
+                    dot.dataset.index = i; // Store index for click handling
+                    dot.addEventListener('click', () => showSlide(i));
+                    carouselDotsContainer.appendChild(dot);
+                });
+            }
+
+            // Function to highlight active dot
+            function updateDots(newIndex) {
+                const dots = document.querySelectorAll('.dot');
+                dots.forEach((dot, i) => {
+                    if (i === newIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+
+            // Event Listeners for buttons
+            prevBtn.addEventListener('click', () => {
+                activeIndex = (activeIndex - 1 + slides.length) % slides.length;
+                showSlide(activeIndex);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                activeIndex = (activeIndex + 1) % slides.length;
+                showSlide(activeIndex);
+            });
+
+            // Initialize carousel
+            createDots(); // Create dots based on the number of slides
+            showSlide(activeIndex); // Show the first slide initially
+
+            // Optional: Auto-play functionality
+            let autoPlayInterval = setInterval(() => {
+                activeIndex = (activeIndex + 1) % slides.length;
+                showSlide(activeIndex);
+            }, 2000); // Change slide every 4 seconds
+
+            // Optional: Pause auto-play on hover
+            const carouselWrapper = document.querySelector('.carousel-wrapper');
+            carouselWrapper.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+            carouselWrapper.addEventListener('mouseleave', () => {
+                autoPlayInterval = setInterval(() => {
+                    activeIndex = (activeIndex + 1) % slides.length;
+                    showSlide(activeIndex);
+                }, 2000);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

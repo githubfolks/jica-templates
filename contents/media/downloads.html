@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Cost Breakdown</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <style>
+        .datatable-pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .datatable-pagination-list {
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        .datatable-pagination-list-item-link {
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            color: #374151;
+            background-color: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 0.25rem;
+        }
+
+        .datatable-pagination-list-item-link:hover {
+            background-color: #f3f4f6;
+        }
+
+        td,
+        th {
+            border: 1px solid #929294;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="max-w-7xl mx-auto p-6 md:p-10 lg:p-8 bg-white shadow-xl rounded-2xl my-2 border border-gray-100">
+        <!-- Main Title -->
+        <h1 class="text-4xl font-extrabold  mb-6 border-b-4 border-gray-500 pb-2">Downloads</h1>
+        <table id="datatable" class="text-gray-800 min-w-full divide-y divide-gray-200">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>File</th>
+                    <th>Authentic URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Operational Manual</td>
+                    <td><a href="/media/downloads/Operational Manual.pdf" target="_blank" rel="noopener">View /
+                            Download</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>IORA Carbon Stock Assessment Report</td>
+                    <td><a href="/media/downloads/IORA Carbon Stock Assessment Report.pdf" target="_blank"
+                            rel="noopener">View / Download</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>SCATFORM Baseline Report</td>
+                    <td><a href="/media/downloads/SCATFORM Baseline Report.pdf" target="_blank" rel="noopener">View /
+                            Download</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>M &amp; E Strategy_SCATFORM</td>
+                    <td><a href="/media/downloads/M&amp;E Strategy_SCATFORM.pdf" target="_blank" rel="noopener">View /
+                            Download</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>JFMC Performance Evaluation Report</td>
+                    <td><a href="/media/downloads/JFMC Performance Evaluation Report.pdf" target="_blank"
+                            rel="noopener">View / Download</a></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3">
+    </script>
+    <script>
+        if (document.getElementById("datatable") && typeof simpleDatatables.DataTable !== 'undefined') {
+            const dataTable = new simpleDatatables.DataTable("#datatable", {
+                paging: true,
+                searchable: false,
+                sortable: false
+            });
+        }
+    </script>
+</body>
+
+</html>

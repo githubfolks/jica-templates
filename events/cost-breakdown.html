@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Cost Breakdown</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <style>
+        .datatable-pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .datatable-pagination-list {
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        .datatable-pagination-list-item-link {
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            color: #374151;
+            background-color: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 0.25rem;
+        }
+
+        .datatable-pagination-list-item-link:hover {
+            background-color: #f3f4f6;
+        }
+
+        td,
+        th {
+            border: 1px solid #929294;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="max-w-7xl mx-auto p-6 md:p-10 lg:p-8 bg-white shadow-xl rounded-2xl my-2 border border-gray-100">
+        <!-- Main Title -->
+        <h1 class="text-4xl font-extrabold  mb-6 border-b-4 border-gray-500 pb-2">
+            Project Cost Breakdown
+        </h1>
+
+        <div class="mb-4 overflow-x-auto">
+            <table id="datatable" class="text-gray-800 min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th>Breakdown of cost</th>
+                        <th>State Share (Mil. Yen)</th>
+                        <th>JICA Share (Mil. Yen)</th>
+                        <th>Total (Mil. Yen)</th>
+                        <th>State Share (Cr. INR)</th>
+                        <th>JICA Share (Cr. INR)</th>
+                        <th>Total (Cr. INR)</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sustainable Forest Management</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">3497</td>
+                        <td class="cell-text">3497</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">214.54</td>
+                        <td class="cell-text">214.54</td>
+                    </tr>
+                    <tr>
+                        <td>Soil &amp; Moisture Conservation</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">1268</td>
+                        <td class="cell-text">1268</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">77.79</td>
+                        <td class="cell-text">77.79</td>
+                    </tr>
+                    <tr>
+                        <td>Livelihood Development</td>
+                        <td class="cell-text">762</td>
+                        <td class="cell-text">1747</td>
+                        <td class="cell-text">2509</td>
+                        <td class="cell-text">46.75</td>
+                        <td class="cell-text">107.18</td>
+                        <td class="cell-text">153.93</td>
+                    </tr>
+                    <tr>
+                        <td>Institutional Strengthening</td>
+                        <td class="cell-text">37</td>
+                        <td class="cell-text">2754</td>
+                        <td class="cell-text">2791</td>
+                        <td class="cell-text">2.27</td>
+                        <td class="cell-text">168.96</td>
+                        <td class="cell-text">171.23</td>
+                    </tr>
+                    <tr>
+                        <td>Price Escalation</td>
+                        <td class="cell-text">197</td>
+                        <td class="cell-text">2003</td>
+                        <td class="cell-text">2200</td>
+                        <td class="cell-text">12.09</td>
+                        <td class="cell-text">122.88</td>
+                        <td class="cell-text">134.97</td>
+                    </tr>
+                    <tr>
+                        <td>Physical Contingency</td>
+                        <td class="cell-text">50</td>
+                        <td class="cell-text">563</td>
+                        <td class="cell-text">613</td>
+                        <td class="cell-text">3.07</td>
+                        <td class="cell-text">34.54</td>
+                        <td class="cell-text">37.61</td>
+                    </tr>
+                    <tr>
+                        <td>Consulting Services (PMC)</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">466</td>
+                        <td class="cell-text">466</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">28.59</td>
+                        <td class="cell-text">28.59</td>
+                    </tr>
+                    <tr>
+                        <td>Land Acquisition</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">0</td>
+                    </tr>
+                    <tr>
+                        <td>Administrative Cost</td>
+                        <td class="cell-text">1200</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">1200</td>
+                        <td class="cell-text">73.62</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">73.62</td>
+                    </tr>
+                    <tr>
+                        <td>GST</td>
+                        <td class="cell-text">791</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">791</td>
+                        <td class="cell-text">48.53</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">48.53</td>
+                    </tr>
+                    <tr>
+                        <td>Import Tax</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">0</td>
+                    </tr>
+                    <tr>
+                        <td>Interest during construction</td>
+                        <td class="cell-text">926</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">926</td>
+                        <td class="cell-text">56.81</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">56.81</td>
+                    </tr>
+                    <tr>
+                        <td>Front End Fee</td>
+                        <td class="cell-text">25</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">25</td>
+                        <td class="cell-text">1.53</td>
+                        <td class="cell-text">0</td>
+                        <td class="cell-text">1.53</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td class="cell-text">3987</td>
+                        <td class="cell-text">12287</td>
+                        <td class="cell-text">16274</td>
+                        <td class="cell-text">244.6</td>
+                        <td class="cell-text">753.8</td>
+                        <td class="cell-text">998.4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <section class="mb-10">
+            <p>
+                Note: Total figures necessarily tallied due to rounding
+            </p>
+            <ul class="ml-10">
+                <li>
+                    1. Exchange Rate: US$1 (NR 67.6, US$1JPY 110.0, INR 1 JPY1.63
+                </li>
+                <li>
+                    2. Pree Escalation: (a) Foreign Currency Portion: 1.83% pa. (b) Local Cumenty Portion: 4.13% pa
+                </li>
+                <li>
+                    3. Physical Contingency: 5.0%
+                </li>
+                <li>
+                    4. Base Year for Cost Estimation: June 2016
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3">
+    </script>
+    <script>
+        if (document.getElementById("datatable") && typeof simpleDatatables.DataTable !== 'undefined') {
+            const dataTable = new simpleDatatables.DataTable("#datatable", {
+                paging: true,
+                searchable: false,
+                sortable: false
+            });
+        }
+    </script>
+</body>
+
+</html>

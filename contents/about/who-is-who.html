@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who is Who</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+    <style>
+        .datatable-pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .datatable-pagination-list {
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        .datatable-pagination-list-item-link {
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            color: #374151;
+            background-color: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 0.25rem;
+        }
+
+        .datatable-pagination-list-item-link:hover {
+            background-color: #f3f4f6;
+        }
+
+        td,
+        th {
+            border: 1px solid #929294;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="max-w-7xl mx-auto p-6 md:p-10 lg:p-8 bg-white shadow-xl rounded-2xl my-2 border border-gray-100">
+        <h1 class="text-4xl font-extrabold  mb-6 border-b-4 border-gray-500 pb-2">Who is Who</h1>
+        <div class="overflow-x-auto">
+            <table id="datatable" class="min-w-full divide-y divide-gray-200">
+                <thead>
+                    <tr>
+                        <th
+                            class="w-[10%] px-4 py-3 text-left text-xs font-semibold  uppercase tracking-wider border-b border-gray-200">
+                            Photo</th>
+                        <th
+                            class="w-[25%] px-4 py-3 text-left text-xs font-semibold  uppercase tracking-wider border-b border-gray-200">
+                            Name</th>
+                        <th
+                            class="w-[30%] px-4 py-3 text-left text-xs font-semibold  uppercase tracking-wider border-b border-gray-200">
+                            Designation</th>
+                        <th
+                            class="w-[20%] px-4 py-3 text-left text-xs font-semibold  uppercase tracking-wider border-b border-gray-200">
+                            Phone Number</th>
+                        <th
+                            class="w-[15%] px-4 py-3 text-left text-xs font-semibold  uppercase tracking-wider border-b border-gray-200">
+                            Mail ID</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+                    <tr class="bg-white hover:bg-gray-50">
+                        <td class="px-4 py-3 text-sm font-medium "><img src="../static/images/manik_saha.jpg"
+                                alt="Prof. (Dr.) Manik Saha"
+                                class="w-40 h-30 object-cover rounded-2xl mx-auto border-2 border-gray-200 shadow-sm">
+                        </td>
+                        <td class="px-4 py-3 text-wrap text-sm ">Prof. (Dr.) Manik Saha</td>
+                        <td class="px-4 py-3  text-wrap text-sm ">Hon'ble Chief Minister of Tripura</td>
+                        <td class="px-4 py-3  text-wrap text-sm ">0381-241-4000 / 4003</td>
+                        <td class="px-4 py-3  text-wrap text-sm ">cmoffice-tr@gov.in / cmofficetr@gmail.com
+                        </td>
+                    </tr>
+                    <tr class="bg-white hover:bg-gray-50">
+                        <td class="px-4 py-3 text-sm font-medium "><img src="../static/images/animesh_debbarma.png"
+                                alt="Shri Animesh Debbarma"
+                                class="w-40 h-30 object-cover rounded-2xl mx-auto border-2 border-gray-200 shadow-sm">
+                        </td>
+                        <td class="px-4 py-3 text-sm ">Shri Animesh Debbarma</td>
+                        <td class="px-4 py-3 text-sm ">Hon'ble Forest Minister of Tripura</td>
+                        <td class="px-4 py-3 text-sm ">+91 381 241 4047</td>
+                        <td class="px-4 py-3 text-sm "></td>
+                    </tr>
+                    <tr class="bg-white hover:bg-gray-50">
+                        <td class="px-4 py-3 text-sm font-medium "><img src="../static/images/jk_sinha.jpg"
+                                alt="Shri J.K. Sinha, IAS"
+                                class="w-40 h-30 object-cover rounded-2xl mx-auto border-2 border-gray-200 shadow-sm">
+                        </td>
+                        <td class="px-4 py-3 text-sm ">Shri J.K. Sinha, IAS</td>
+                        <td class="px-4 py-3 text-sm ">Chief Secretary, Government of Tripura</td>
+                        <td class="px-4 py-3 text-sm ">0381-2414392 / 0381-2413200</td>
+                        <td class="px-4 py-3 text-sm ">cs-tripura@nic.in / cstripura@gmail.com</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-gray-50">
+                        <td class="px-4 py-3 text-sm font-medium "><img src="../static/images/rabindra_samal.png"
+                                alt="Shri Rabindra Kumar Samal, IFS"
+                                class="w-40 h-30 object-cover rounded-2xl mx-auto border-2 border-gray-200 shadow-sm">
+                        </td>
+                        <td class="px-4 py-3 text-sm ">Shri Rabindra Kumar Samal, IFS</td>
+                        <td class="px-4 py-3 text-sm ">
+                            <p class="text-wrap">Principal Chief Conservator of Forest (PCCF) &amp; Head of Forest Force
+                                (HoFF), Tripura</p>
+                        </td>
+                        <td class="px-4 py-3 text-sm ">9436995208</td>
+                        <td class="px-4 py-3 text-sm ">pccftripura@gmail.com</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-gray-50">
+                        <td class="px-4 py-3 text-sm font-medium "><img src="../static/images/pravin_agrawal.png"
+                                alt="Shri Pravin L. Agrawal, IFS"
+                                class="w-40 h-30 object-cover rounded-2xl mx-auto border-2 border-gray-200 shadow-sm">
+                        </td>
+                        <td class="px-4 py-3 text-sm ">Shri Pravin L. Agrawal, IFS</td>
+                        <td class="px-4 py-3 text-sm ">Chief Executive Officer &amp; Project Director, Tripura
+                            JICA Project (SCATFORM)</td>
+                        <td class="px-4 py-3 text-sm ">+91 9402588888</td>
+                        <td class="px-4 py-3 text-sm ">tripurajica@gmail.com / tr020@ifs.nic.in</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-gray-50">
+                        <td class="px-4 py-3 text-sm font-medium "><img src="../static/images/wangdup_bhutia.png"
+                                alt="Dr. Wangdup Bhutia,IFS"
+                                class="w-40 h-30 object-cover rounded-2xl mx-auto border-2 border-gray-200 shadow-sm">
+                        </td>
+                        <td class="px-4 py-3 text-sm ">Dr. Wangdup Bhutia,IFS</td>
+                        <td class="px-4 py-3 text-sm ">Director, Administrative, Finance &amp; Audit Tripura
+                            JICA Project(SCATFORM)</td>
+                        <td class="px-4 py-3 text-sm ">7047684727 / 9612367763 / 9436582218</td>
+                        <td class="px-4 py-3 text-sm ">scatformanf@gmail.com / wbhutia@gmail.com</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-gray-50">
+                        <td class="px-4 py-3 text-sm font-medium "><img src="../static/images/no-profile-picture.png"
+                                alt="Shri Gautam Das, IFS"
+                                class="w-40 h-30 object-cover rounded-2xl mx-auto border-2 border-gray-200 shadow-sm">
+                        </td>
+                        <td class="px-4 py-3 text-sm ">Shri Harshakumar. C, IFS</td>
+                        <td class="px-4 py-3 text-sm ">Director, Monitoring & Evaluation</td>
+                        <td class="px-4 py-3 text-sm ">9612913045</td>
+                        <td class="px-4 py-3 text-sm ">scatformmne@gmail.com</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-gray-50">
+                        <td class="px-4 py-3 text-sm font-medium "><img src="../static/images/gaitam_das.png"
+                                alt="Shri Gautam Das, IFS"
+                                class="w-40 h-30 object-cover rounded-2xl mx-auto border-2 border-gray-200 shadow-sm">
+                        </td>
+                        <td class="px-4 py-3 text-sm ">Shri Gautam Das, IFS</td>
+                        <td class="px-4 py-3 text-sm ">
+                            Director, Livelihood Capacity Development, Tripura JICA Project (SCATFORM)
+                        </td>
+                        <td class="px-4 py-3 text-sm ">9436123837</td>
+                        <td class="px-4 py-3 text-sm ">scatformmne@gmail.com / scatformlcd@gmail.com</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-gray-50">
+                        <td class="px-4 py-3 text-sm font-medium "><img src="../static/images/paushali_roy.jpeg"
+                                alt="Smt. Paushali Roy, IFS"
+                                class="w-40 h-30 object-cover rounded-2xl mx-auto border-2 border-gray-200 shadow-sm">
+                        </td>
+                        <td class="px-4 py-3 text-sm ">Smt. Paushali Roy, IFS</td>
+                        <td class="px-4 py-3 text-sm ">Director, Sustainable Forest Management; Tripura JICA
+                            Project(SCATFORM)</td>
+                        <td class="px-4 py-3 text-sm ">9402137232</td>
+                        <td class="px-4 py-3 text-sm ">scatformsfm@gmail.com / paushali.roy84@gov.in</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-gray-50">
+                        <td class="px-4 py-3 text-sm font-medium "><img src="../static/images/trijash_debbarma.jpeg"
+                                alt="Shri Trijash Debbarma, TFS - I"
+                                class="w-40 h-30 object-cover rounded-2xl mx-auto border-2 border-gray-200 shadow-sm">
+                        </td>
+                        <td class="px-4 py-3 text-sm ">Shri Trijash Debbarma, TFS - I</td>
+                        <td class="px-4 py-3 text-sm ">Assistant Director, (M&amp;E) / DDO Tripura JICA
+                            Project(SCATFORM)</td>
+                        <td class="px-4 py-3 text-sm ">8974163512</td>
+                        <td class="px-4 py-3 text-sm ">scatformadmne@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3">
+    </script>
+    <script>
+        if (document.getElementById("datatable") && typeof simpleDatatables.DataTable !== 'undefined') {
+            const dataTable = new simpleDatatables.DataTable("#datatable", {
+                paging: true,
+                searchable: false,
+                sortable: false
+            });
+        }
+    </script>
+</body>
+
+</html>

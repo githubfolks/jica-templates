@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Management Unit(RMU)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+    <style>
+        .datatable-pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .datatable-pagination-list {
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        .datatable-pagination-list-item-link {
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            color: #374151;
+            background-color: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 0.25rem;
+        }
+
+        .datatable-pagination-list-item-link:hover {
+            background-color: #f3f4f6;
+        }
+
+        td,
+        th {
+            border: 1px solid #929294;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="max-w-7xl mx-auto p-6 md:p-10 lg:p-8 bg-white shadow-xl rounded-2xl my-2 border border-gray-100">
+        <h1 class="text-4xl font-extrabold  mb-6 border-b-4 border-gray-500 pb-2">
+            Range Management Unit(RMU)
+        </h1>
+
+        <section class="mb-10">
+            <p class=" text-justify text-lg mb-4">
+                Following the forest department structure RMU will be created as an extended arm of the SDMU and as a
+                part of the autonomous society i.e. PMU. RMU will be headed by a RMU Chief who is in the rank of Ranger
+                or above in the Forest Department. S/he will facilitate project implementation at the range level, and
+                will also extend all technical inputs and guidance to Beats within their jurisdiction and at field level
+                on day-to-day basis. RMU Chief will be responsible for supervising and guiding the works carried out by
+                the Beat Officers as well as JFMCs/ EDCs, and facilitate convergence at the block level.
+            <p class=" text-justify text-lg mb-4">
+            <p>
+                RMU Chief will be supported by set of personnel viz., Community Organizer, Livelihood Coordinator,
+                Assistant Field Accountant, and Range Data Analyst. S/he would be further supported by Beat Officers and
+                Field Facilitators engaged at the JFMC/ EDC level. Female candidates will be encouraged to join the
+                Project at various positions. The structure of RMU is given in the figure below.
+            </p>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl md:text-3xl font-bold mb-2 mt-4">
+                District-wise Range Management Unit(RMU)
+            </h2>
+        </section>
+        <div id="accordion-collapse" data-accordion="collapse">
+
+            <h2 id="accordion-collapse-heading-1" class="text-2xl md:text-2xl font-bold mb-4">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-2 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl hover:bg-gray-100"
+                    data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+                    aria-controls="accordion-collapse-body-1">
+                    <span>North Tripura</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </h2>
+
+            <div id="accordion-collapse-body-1" class="mb-4 hidden overflow-x-auto"
+                aria-labelledby="accordion-collapse-heading-1">
+                <table id="north-table" class="text-gray-800 min-w-full divide-y divide-gray-200">
+                    <thead>
+                        <tr>
+                            <th>SL No</th>
+                            <th>District </th>
+                            <th>Name</th>
+                            <th>Designation</th>
+                            <th>Location</th>
+                            <th>Mobile</th>
+                            <th>Email ID</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>North Tripura</td>
+                            <td>RAJIB DEBNATH</td>
+                            <td>RDA</td>
+                            <td>Dharmanagar RMU</td>
+                            <td>9485012881</td>
+                            <td>rajibpriya.1987@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>North Tripura</td>
+                            <td>Prabakar Das Purakshatya</td>
+                            <td>RDA</td>
+                            <td>Panisagar RMU</td>
+                            <td>7005168919</td>
+                            <td>prabhakar.prdx81@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>North Tripura</td>
+                            <td>Balado Lalpuiliana Sailo</td>
+                            <td>SDA</td>
+                            <td>Kanchanpur SDMU</td>
+                            <td>9366188191</td>
+                            <td>puilian18@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>North Tripura</td>
+                            <td>Upam Chakma</td>
+                            <td>FA</td>
+                            <td>Kanchanpur SDMU</td>
+                            <td>8132016294</td>
+                            <td>upamchakma@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>North Tripura</td>
+                            <td>Pondorthang Halam</td>
+                            <td>FA</td>
+                            <td>Dharmanagar SDMU</td>
+                            <td>9862617732</td>
+                            <td>thanga12345@gmail</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>North Tripura</td>
+                            <td>Amit Kumar Tripura</td>
+                            <td>SDA</td>
+                            <td>Dharmanagar SDMU</td>
+                            <td>9862665873</td>
+                            <td>kr.tripuraamit@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>North Tripura</td>
+                            <td>Ratnadip Deb</td>
+                            <td>RDA</td>
+                            <td>Kanchanpur RMU</td>
+                            <td>8731800838</td>
+                            <td>ratnadipdeb538@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>North Tripura</td>
+                            <td>Prabakar Das Purakshatya</td>
+                            <td>RDA</td>
+                            <td>Panisagar RMU</td>
+                            <td>7005168919</td>
+                            <td>prabhakar.prdx81@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>North Tripura</td>
+                            <td>Anupam Debnath</td>
+                            <td>AFA</td>
+                            <td>Panisagar RMU</td>
+                            <td>8240062977</td>
+                            <td>anupamdebnath90@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 id="accordion-collapse-heading-2" class="text-2xl md:text-2xl font-bold mb-4">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-2 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl hover:bg-gray-100"
+                    data-accordion-target="#accordion-collapse-body-2" aria-expanded="true"
+                    aria-controls="accordion-collapse-body-2">
+                    <span>Unakoti</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-collapse-body-2" class="mb-4 hidden overflow-x-auto"
+                aria-labelledby="accordion-collapse-heading-1">
+                <table id="unakoti-table" class="text-gray-800 min-w-full divide-y divide-gray-200">
+                    <thead>
+                        <tr>
+                            <th>SL No</th>
+                            <th>District </th>
+                            <th>Name </th>
+                            <th>Designation </th>
+                            <th>Location </th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Unakoti </td>
+                            <td>Nirupom Sharma</td>
+                            <td>SDA</td>
+                            <td>Kumarghat </td>
+                            <td>nirupomsharma0928@gmail.com</td>
+                            <td>8837345953</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Unakoti </td>
+                            <td>Kishore Deb</td>
+                            <td>FA</td>
+                            <td>Pecharthal</td>
+                            <td>kishore2kgt@gmail.com</td>
+                            <td>9863491007</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Unakoti </td>
+                            <td>Parmita Roy</td>
+                            <td>RDA</td>
+                            <td>Pecharhal</td>
+                            <td>parmitaroy443@gmail.com</td>
+                            <td>7005038215</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Unakoti </td>
+                            <td>Ajoy Das</td>
+                            <td>RDA</td>
+                            <td>Machmara</td>
+                            <td>ajoyad02@gmail.com</td>
+                            <td>8837488326</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Unakoti </td>
+                            <td>Sayan Das</td>
+                            <td>RDA</td>
+                            <td>Kumargat</td>
+                            <td>sayandas0786@gmail.com</td>
+                            <td>8732004850</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Unakoti </td>
+                            <td>Rupom Dey</td>
+                            <td>FA</td>
+                            <td>Kailashahar SDMU</td>
+                            <td>rupomdey7876@gmail.com</td>
+                            <td>9366280793</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Unakoti </td>
+                            <td>Goutam Datta</td>
+                            <td>SDA</td>
+                            <td>Kailashahar SDMU</td>
+                            <td>goutamdatta1982@gmail.com</td>
+                            <td>9612310362</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Unakoti </td>
+                            <td>Gourrab Gosh</td>
+                            <td>RDA</td>
+                            <td>Gournagar RMU</td>
+                            <td>gouravkgt@gmail.com</td>
+                            <td>7005408675</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Unakoti </td>
+                            <td>Mintu Debnath</td>
+                            <td>RDA</td>
+                            <td>Chandipur RMU</td>
+                            <td>mintudebnath@gmail.com</td>
+                            <td>9436993563</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 id="accordion-collapse-heading-3" class="text-2xl md:text-2xl font-bold mb-4">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-2 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl hover:bg-gray-100"
+                    data-accordion-target="#accordion-collapse-body-3" aria-expanded="true"
+                    aria-controls="accordion-collapse-body-3">
+                    <span>Khowai</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-collapse-body-3" class="mb-4 hidden overflow-x-auto"
+                aria-labelledby="accordion-collapse-heading-1">
+                <table id="khowai-table" class="text-gray-800 min-w-full divide-y divide-gray-200">
+                    <thead>
+                        <tr>
+                            <th>SL No</th>
+                            <th>District </th>
+                            <th>Name </th>
+                            <th>Designation </th>
+                            <th>Location </th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Khowai </td>
+                            <td>Sanjib Kumar Deb</td>
+                            <td>SDA</td>
+                            <td> Teliamura SDMU</td>
+                            <td>sanjibd2012@yahoo.com</td>
+                            <td>9863657085</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Khowai </td>
+                            <td>Birojit Chakma</td>
+                            <td>FA</td>
+                            <td> Teliamura SDMU</td>
+                            <td>chakmabirojit12@gmail.com</td>
+                            <td>6009556783</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Khowai </td>
+                            <td>Vivekananda Majumder</td>
+                            <td>RDA </td>
+                            <td>Mungiakami RMU</td>
+                            <td>majumdervivekananda@gmail.com</td>
+                            <td>9089187864</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Khowai </td>
+                            <td>Bipul Choudhury </td>
+                            <td>RDA </td>
+                            <td>Teliamura RMU</td>
+                            <td>bipulfeb28@gmail.com</td>
+                            <td>7005828452</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Khowai </td>
+                            <td>Purna Ch. Das</td>
+                            <td>FA </td>
+                            <td>Khowai SDMU</td>
+                            <td>purnads6@gmail.com</td>
+                            <td>9862739305</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Khowai </td>
+                            <td>Sani Deb</td>
+                            <td>RDA</td>
+                            <td> Padmabil RMU</td>
+                            <td>Sanideb52@gmail.com</td>
+                            <td>9362335453</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Khowai </td>
+                            <td>Bikash Saha</td>
+                            <td>SDA </td>
+                            <td>Khowai SDMU</td>
+                            <td>bikashjica@gmail.com</td>
+                            <td>9862699746</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Khowai </td>
+                            <td>Suman Das</td>
+                            <td>RDA </td>
+                            <td>Tulashikhar RMU</td>
+                            <td>dassuman3787@gmail.com</td>
+                            <td>9366048259</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 id="accordion-collapse-heading-4" class="text-2xl md:text-2xl font-bold mb-4">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-2 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl hover:bg-gray-100"
+                    data-accordion-target="#accordion-collapse-body-4" aria-expanded="true"
+                    aria-controls="accordion-collapse-body-4">
+                    <span>West</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-collapse-body-4" class="mb-4 hidden overflow-x-auto"
+                aria-labelledby="accordion-collapse-heading-1">
+                <table id="west-table" class="text-gray-800 min-w-full divide-y divide-gray-200">
+                    <thead>
+                        <tr>
+                            <th>SL No</th>
+                            <th>District</th>
+                            <th>Name</th>
+                            <th>Designation</th>
+                            <th>Location</th>
+                            <th>Mobile</th>
+                            <th>Email </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>West </td>
+                            <td>Sayan Das</td>
+                            <td>RDA</td>
+                            <td>Kumarghat RMU</td>
+                            <td>8732004850</td>
+                            <td>sayandas0786@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>West </td>
+                            <td>Ajoy Das</td>
+                            <td>RDA</td>
+                            <td>Machmara RMU</td>
+                            <td>8837488327</td>
+                            <td>ajoyad02@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>West </td>
+                            <td>Parmita Roy</td>
+                            <td>RDA</td>
+                            <td>Pecharthal RMU</td>
+                            <td>7005038215</td>
+                            <td>parmitaroy92@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>West </td>
+                            <td>Kishore Deb</td>
+                            <td>FA</td>
+                            <td>Kumarghat SDMU</td>
+                            <td>9863491007</td>
+                            <td>kishore2kgt@gamil.com</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>West </td>
+                            <td>Nirupom Sharma</td>
+                            <td>SDA</td>
+                            <td></td>
+                            <td>8837345953</td>
+                            <td>nirupomsharma0928@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>West </td>
+                            <td>Dimpal Paul</td>
+                            <td>RDA</td>
+                            <td>Champaknagar RMU</td>
+                            <td>8837219841</td>
+                            <td>asespaul@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>West </td>
+                            <td>Rajesh Das</td>
+                            <td>SDA</td>
+                            <td>Mandwi SDMU</td>
+                            <td>7005681696</td>
+                            <td>rajeshdastla92@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>West </td>
+                            <td>Ashim Podder</td>
+                            <td>FA</td>
+                            <td>Mandwi SDMU</td>
+                            <td>9089792699</td>
+                            <td>earthmember@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>West </td>
+                            <td>Debalina Banik </td>
+                            <td>RDA</td>
+                            <td>Subalsing RMU</td>
+                            <td>9233978151</td>
+                            <td>dasdebalina970@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 id="accordion-collapse-heading-5" class="text-2xl md:text-2xl font-bold mb-4">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-2 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl hover:bg-gray-100"
+                    data-accordion-target="#accordion-collapse-body-5" aria-expanded="true"
+                    aria-controls="accordion-collapse-body-5">
+                    <span>Sepahijala</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </h2>
+
+            <div id="accordion-collapse-body-5" class="mb-4 hidden overflow-x-auto"
+                aria-labelledby="accordion-collapse-heading-1">
+                <table id="sepahijala-table" class="text-gray-800 min-w-full divide-y divide-gray-200">
+                    <thead>
+                        <tr>
+                            <th>SL No</th>
+                            <th>District </th>
+                            <th>Name </th>
+                            <th>Designation </th>
+                            <th>Location</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Sepahijala</td>
+                            <td>Sudipta Datta</td>
+                            <td>RDA</td>
+                            <td>Melaghar RMU</td>
+                            <td>sudiptadatta062@gmail.com</td>
+                            <td>6009486177</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Sepahijala</td>
+                            <td>Bijoy Debnath</td>
+                            <td>FA</td>
+                            <td>Sonamura SDMU</td>
+                            <td>bdtilbijoydebnath0@gmail.com</td>
+                            <td>7005215460</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Sepahijala</td>
+                            <td>Abhinash Debnath</td>
+                            <td>RDA</td>
+                            <td>Kathalia RMU</td>
+                            <td>nashabhi55555@gmail.com</td>
+                            <td>8837281937</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Sepahijala</td>
+                            <td>Malin Nama</td>
+                            <td>RDA</td>
+                            <td>Boxanagar RMU</td>
+                            <td>malinnama2@rediffmail.com</td>
+                            <td>9366973099</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Sepahijala</td>
+                            <td>Biprajit Dhar</td>
+                            <td>SDA</td>
+                            <td>Bishalgarh SDMU</td>
+                            <td>iamb.pro2000@gmail.com</td>
+                            <td>8729814004</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Sepahijala</td>
+                            <td>Soumitra Kr. Bhattacharjee</td>
+                            <td>FA</td>
+                            <td>Bishalgarh SDMU</td>
+                            <td>soumitra29oct@gmail.com</td>
+                            <td>9615525904</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Sepahijala</td>
+                            <td>Manna Das</td>
+                            <td>RDA</td>
+                            <td>Jampuijala RMU </td>
+                            <td>mannals11@gmail.com</td>
+                            <td>8837415955</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Sepahijala</td>
+                            <td>Tinku Shil</td>
+                            <td>RDA</td>
+                            <td>Charilam RMU </td>
+                            <td>tinkushil1977@gmail.com</td>
+                            <td>6009840556</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <h2 id="accordion-collapse-heading-6" class="text-2xl md:text-2xl font-bold mb-4">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-2 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl hover:bg-gray-100"
+                    data-accordion-target="#accordion-collapse-body-6" aria-expanded="true"
+                    aria-controls="accordion-collapse-body-6">
+                    <span>Gomati</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-collapse-body-6" class="mb-4 hidden overflow-x-auto"
+                aria-labelledby="accordion-collapse-heading-1">
+                <table id="gomati-table" class="text-gray-800 min-w-full divide-y divide-gray-200">
+                    <thead>
+                        <tr>
+                            <th>SL No</th>
+                            <th>District</th>
+                            <th>Location </th>
+                            <th>Designation </th>
+                            <th>Name </th>
+                            <th> Email</th>
+                            <th>Mobile</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Gomati</td>
+                            <td>Udaipur</td>
+                            <td>SDA</td>
+                            <td>Arindam Roy</td>
+                            <td>arindamroy.1989@gmail.com</td>
+                            <td>7005683613</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Gomati</td>
+                            <td>Udaipur</td>
+                            <td>FA</td>
+                            <td>Tanisree Saha</td>
+                            <td>tanisreesaha9640@gmail.com</td>
+                            <td>8414969601</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Gomati</td>
+                            <td>Karbook</td>
+                            <td>SDA</td>
+                            <td>Pratap Debbarma</td>
+                            <td>pratapdebbarma07@gmail.com</td>
+                            <td>9366581733</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Gomati</td>
+                            <td>Karbook</td>
+                            <td>FA</td>
+                            <td>Lafruchai Mog</td>
+                            <td>lafru.mog@gmail.com</td>
+                            <td>9612689670</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Gomati</td>
+                            <td>Amarpur RMU</td>
+                            <td>RDA</td>
+                            <td>Subham Debnath</td>
+                            <td>subhamdebnath066@gmail.com</td>
+                            <td>7630916289</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Gomati</td>
+                            <td>Ampi RMU</td>
+                            <td>RDA</td>
+                            <td>Sri Sourabh Das</td>
+                            <td>sourabhdas008@gmail.com</td>
+                            <td>8729814097</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Gomati</td>
+                            <td>Karbook RMU</td>
+                            <td>RDA</td>
+                            <td>Ratan Das</td>
+                            <td>ratandasamp12@gmail.com</td>
+                            <td>7005978432</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Gomati</td>
+                            <td>Tirthamukh RMU</td>
+                            <td>RDA</td>
+                            <td>Dilip Das</td>
+                            <td>dilipamp84@gmail.com</td>
+                            <td>9612213332</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Gomati</td>
+                            <td>Silachari RMU</td>
+                            <td>RDA</td>
+                            <td>Rana Dey</td>
+                            <td>rd4830258@gmail.com</td>
+                            <td>8787784071</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Gomati</td>
+                            <td>Killa RMU</td>
+                            <td>RDA</td>
+                            <td>Amarjit Bhowmik</td>
+                            <td>mynameisamarjit@gmail.com</td>
+                            <td>7005164565</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 id="accordion-collapse-heading-7" class="text-2xl md:text-2xl font-bold mb-4">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-2 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl hover:bg-gray-100"
+                    data-accordion-target="#accordion-collapse-body-7" aria-expanded="true"
+                    aria-controls="accordion-collapse-body-7">
+                    <span>South</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-collapse-body-7" class="mb-4 hidden overflow-x-auto"
+                aria-labelledby="accordion-collapse-heading-1">
+                <table id="south-table" class="text-gray-800 min-w-full divide-y divide-gray-200">
+                    <thead>
+                        <tr>
+                            <th>SL No</th>
+                            <th>District</th>
+                            <th>Place of Posting</th>
+                            <th>Name </th>
+                            <th>Designation </th>
+                            <th>Personal Email ID </th>
+                            <th>Mobile </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td rowspan="10">South</td>
+                            <td rowspan="2">SDMU Bagafa</td>
+                            <td>Thomas Bongcher(LDC) working as SDA</td>
+                            <td>SDA</td>
+                            <td>thomasronte365@gmail.com</td>
+                            <td>7005488145</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Krishnagopal Ghosh</td>
+                            <td>FA</td>
+                            <td>krishna.ghosh33@gmail.com</td>
+                            <td>8787790318</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>RMU Bagafa</td>
+                            <td>Debashis Paul</td>
+                            <td>RDA</td>
+                            <td>debafrom1991@gmail.com</td>
+                            <td>9366839588</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>RMU Kakulia</td>
+                            <td>Rathechandra Tripura</td>
+                            <td>RDA</td>
+                            <td>tripurarathe91@gmail.com</td>
+                            <td>8974577028</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>RMU Hrishyamukh</td>
+                            <td>Rahul Debnath</td>
+                            <td>RDA</td>
+                            <td>rahulmrmd@gmail.com </td>
+                            <td>9862462782</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td rowspan="2">SDMU Sabroom</td>
+                            <td>Dulan karmakar</td>
+                            <td>SDA</td>
+                            <td>dulankarmakar20@gmail.com</td>
+                            <td>7628986816</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Sushanta Dey</td>
+                            <td>FA</td>
+                            <td>sushantadey9280@gmail.com</td>
+                            <td>7085307377</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>RMU Satchand</td>
+                            <td>Bishal Biswas</td>
+                            <td>RDA</td>
+                            <td>bishalbiswas2607@gmail.com</td>
+                            <td>7005926702</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>RMU Srinagar</td>
+                            <td>Ramen Baidya</td>
+                            <td>RDA</td>
+                            <td>ramenbaidyabd93@gmail.com</td>
+                            <td>8974345880</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>RMU Bankul</td>
+                            <td>Boloram Mog</td>
+                            <td>RDA</td>
+                            <td>steephen9@gmail.com</td>
+                            <td>7085867965</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 id="accordion-collapse-heading-8" class="text-2xl md:text-2xl font-bold mb-4">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-2 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl hover:bg-gray-100"
+                    data-accordion-target="#accordion-collapse-body-8" aria-expanded="true"
+                    aria-controls="accordion-collapse-body-8">
+                    <span>Gumti WLS</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-collapse-body-8" class="mb-4 hidden overflow-x-auto"
+                aria-labelledby="accordion-collapse-heading-1">
+                <table id="gumti-table" class="text-gray-800 min-w-full divide-y divide-gray-200">
+                    <thead>
+                        <tr>
+                            <th>SL No</th>
+                            <th>District </th>
+                            <th>Place of Posting</th>
+                            <th>Name </th>
+                            <th>Designation </th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>GWLS</td>
+                            <td>Gandacherra SDMU</td>
+                            <td>Anindya Debnath</td>
+                            <td>SDA</td>
+                            <td>anindyadebnath3330@gmail.com</td>
+                            <td>8974843163</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>GWLS</td>
+                            <td>Gandacherra SDMU</td>
+                            <td>Ajit Debnath</td>
+                            <td>FA</td>
+                            <td>debnathajit50@gmail.com</td>
+                            <td>9862427616</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>GWLS</td>
+                            <td>Gandacherra RMU</td>
+                            <td>Sadhana Bala Tripura</td>
+                            <td>RDA</td>
+                            <td>sadhanatripura47@gmail.com</td>
+                            <td>8730067570</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>GWLS</td>
+                            <td>Raishyabari RMU</td>
+                            <td>Ganesh Debnath</td>
+                            <td>RDA</td>
+                            <td>debnathg129@gmail.com</td>
+                            <td>7628039834</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>GWLS</td>
+                            <td>Ganganagar RMU </td>
+                            <td>Subrata Ghosh</td>
+                            <td>RDA</td>
+                            <td>subratanew@gmai.com</td>
+                            <td>9612038598</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3">
+    </script>
+    <script>
+        if (document.getElementById("north-table") && typeof simpleDatatables.DataTable !== 'undefined') {
+            const dataTable = new simpleDatatables.DataTable("#north-table", {
+                paging: true,
+                searchable: false,
+                sortable: false
+            });
+        }
+
+        if (document.getElementById("unakoti-table") && typeof simpleDatatables.DataTable !== 'undefined') {
+            const dataTable = new simpleDatatables.DataTable("#unakoti-table", {
+                paging: true,
+                searchable: false,
+                sortable: false
+            });
+        }
+
+        if (document.getElementById("khowai-table") && typeof simpleDatatables.DataTable !== 'undefined') {
+            const dataTable = new simpleDatatables.DataTable("#khowai-table", {
+                paging: true,
+                searchable: false,
+                sortable: false
+            });
+        }
+
+        if (document.getElementById("west-table") && typeof simpleDatatables.DataTable !== 'undefined') {
+            const dataTable = new simpleDatatables.DataTable("#west-table", {
+                paging: true,
+                searchable: false,
+                sortable: false
+            });
+        }
+
+        if (document.getElementById("sepahijala-table") && typeof simpleDatatables.DataTable !== 'undefined') {
+            const dataTable = new simpleDatatables.DataTable("#sepahijala-table", {
+                paging: true,
+                searchable: false,
+                sortable: false
+            });
+        }
+
+        if (document.getElementById("north-table") && typeof simpleDatatables.DataTable !== 'undefined') {
+            const dataTable = new simpleDatatables.DataTable("#gomati-table", {
+                paging: true,
+                searchable: false,
+                sortable: false
+            });
+        }
+
+        if (document.getElementById("gwls-table") && typeof simpleDatatables.DataTable !== 'undefined') {
+            const dataTable = new simpleDatatables.DataTable("#south-table", {
+                paging: true,
+                searchable: false,
+                sortable: false
+            });
+        }
+
+    </script>
+</body>
+
+</html>
