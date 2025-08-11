@@ -1,241 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Staff Directory</title>
+  <title>TechBrij: HTML Table</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-          },
-        }
-      }
+  <style>
+    .datatable-pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
     }
-  </script>
+
+    .datatable-pagination-list {
+      display: flex;
+      gap: 0.25rem;
+    }
+
+    .datatable-pagination-list-item-link {
+      padding: 0.25rem 0.75rem;
+      font-size: 0.875rem;
+      color: #374151;
+      background-color: #ffffff;
+      border: 1px solid #d1d5db;
+      border-radius: 0.25rem;
+    }
+
+    .datatable-pagination-list-item-link:hover {
+      background-color: #f3f4f6;
+    }
+
+    td,
+    th {
+      border: 1px solid #929294;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="overflow-x-auto">
-    <table id="datatable" class="text-gray-800 min-w-full divide-y divide-gray-200">
-      <thead>
-        <tr>
-          <th>SL No</th>
-          <th>Wing</th>
-          <th>Name</th>
-          <th>Designation</th>
-          <th>Phone Number</th>
-          <th>Mail ID</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="border-t">
-          <td rowspan="2">1</td>
-          <td rowspan="6">M&E Wing</td>
-          <td>Er. Kishore Nath</td>
-          <td>PM(M&E)</td>
-          <td>8787860759</td>
-          <td>spmmne1@gmail.com</td>
-        </tr>
-        <tr>
-          <td>Chandan Panday</td>
-          <td>Communication Officer</td>
-          <td>8732072596</td>
-          <td>scatformco@gmail.com</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td></td>
-          <td>MIS Officer</td>
-          <td></td>
-          <td>scatformmis@gmail.com</td>
-        </tr>
-        <tr>
-          <td>3</td>
-
-          <td>Er. Prasenjit Paul</td>
-          <td>GIS/RS Officer</td>
-          <td>9612642788</td>
-          <td>scatformgis@gmail.com</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td></td>
-          <td>Software Programmer</td>
-          <td></td>
-          <td>scatformsp@gmail.com</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>Mousumi Deb</td>
-          <td>PM(Training)</td>
-          <td>7005564860</td>
-          <td>spmtrg1@gmail.com</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td></td>
-          <td>Sunayana Sarkar</td>
-          <td>Data Operator</td>
-          <td>8259004964</td>
-          <td>sunayana1989@yahoo.in</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td></td>
-          <td>Manika Jamatia</td>
-          <td>Data Operator</td>
-          <td>7005858087</td>
-          <td>manikajamatia81@gmail.com</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td></td>
-          <td>Nandita Das</td>
-          <td>Data Operator</td>
-          <td>9863331546</td>
-          <td>nanditad15@gmail.com</td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td rowspan="3">SFM Wing</td>
-          <td>Moonmoon Debnath</td>
-          <td>PM(Forest Tech.)</td>
-          <td>9436703660</td>
-          <td>spmfor1@gmail.com</td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>Biplab Banik</td>
-          <td>PM(Biodiversity)</td>
-          <td>8974532552</td>
-          <td>spmagf@gmail.com</td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td>Er. Debasish Majumder</td>
-          <td>PE(SMC& Building)</td>
-          <td>9862172314</td>
-          <td>scatformpe@gmail.com</td>
-        </tr>
-        <tr>
-          <td>13</td>
-          <td rowspan="11">A&F Wing</td>
-          <td>CA Ashmita Debnath</td>
-          <td>PM(Audit)</td>
-          <td>9073698402</td>
-          <td>scatformaudit@gmail.com</td>
-        </tr>
-        <tr>
-          <td>14</td>
-          <td>Uttam Acharjee</td>
-          <td>Cashier</td>
-          <td>9612546007</td>
-          <td>uttamacharjee1976@gmail.com</td>
-        </tr>
-        <tr>
-          <td>15</td>
-          <td>Biswanath Sutradhar</td>
-          <td>Accountant(S&C)</td>
-          <td>9856144455</td>
-          <td>biswanath-sutradhar75@rediffmail.com</td>
-        </tr>
-        <tr>
-          <td>16</td>
-          <td>Suman Shil</td>
-          <td>Accountant(Salaries &Taxes)</td>
-          <td>8787508277</td>
-          <td>suman2085@gmail.com</td>
-        </tr>
-        <tr>
-          <td>17</td>
-          <td>Er. Pritam Laskar</td>
-          <td>Office Manager</td>
-          <td>7005112733</td>
-          <td>pritamlskr625@gmail.com</td>
-        </tr>
-        <tr>
-          <td>18</td>
-          <td>Sarmista Chakraborty</td>
-          <td>Computer Operator</td>
-          <td>8131907125</td>
-          <td>sarmisthachakraborty599@gmail.com</td>
-        </tr>
-        <tr>
-          <td>19</td>
-          <td>Ankita Shil</td>
-          <td>Computer Operator</td>
-          <td>7642811398</td>
-          <td>silankeeta@gmail.com</td>
-        </tr>
-        <tr>
-          <td>20</td>
-          <td>Rajesh Biswas</td>
-          <td>Computer Operator</td>
-          <td>9774423836</td>
-          <td>biswasrajesh257@gmail.com</td>
-        </tr>
-        <tr>
-          <td>21</td>
-          <td>Priyanka Bhowmik</td>
-          <td>Computer Operator</td>
-          <td>8794844067</td>
-          <td>priyankabhowmil@gmail.com</td>
-        </tr>
-        <tr>
-          <td>22</td>
-          <td>Tanoy Paul</td>
-          <td>Computer Operator</td>
-          <td>9862525123</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>23</td>
-          <td>Pradip Debnath</td>
-          <td>Computer Operator</td>
-          <td>8132024580</td>
-          <td>debnathpradip353@gmail.com</td>
-        </tr>
-        <tr>
-          <td>24</td>
-          <td rowspan="3">LCD Wing</td>
-          <td></td>
-          <td>PM(Training)</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>25</td>
-          <td>Rajib Malla</td>
-          <td>PM(Livelihood)</td>
-          <td>7085940566</td>
-          <td>mallarajib@gmail.com</td>
-        </tr>
-        <tr>
-          <td>26</td>
-          <td>Sarat Kumar Yadav</td>
-          <td>PM(Agro-Forestry)</td>
-          <td>9402121614</td>
-          <td>spmagf@gmail.com</td>
-        </tr>
-        <tr>
-          <td>26</td>
-          <td></td>
-          <td>Coordinator(G&C)</td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <table id="datatable" class="text-gray-800 min-w-full divide-y divide-gray-200">
+    <thead>
+      <tr>
+        <th>Type of Ecotourism site</th>
+        <th>Name of Ecotourism site</th>
+        <th>District Management Unit (DMU) / Sub-Divisional Management Unit (SDMU)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="3">Upgradation of the Existing Eco-Parks</td>
+        <td>Rungthang Eco-Park</td>
+        <td>Sepahijala / Bishalgarh</td>
+      </tr>
+      <tr>
+        <td>Unakoti Eco-Park</td>
+        <td>Unakoti / Kailashahar</td>
+      </tr>
+      <tr>
+        <td>Banabiti Eco-Park</td>
+        <td>Khowai / Khowai</td>
+      </tr>
+      <tr>
+        <td rowspan="3">Development of New Ecotourism Destination</td>
+        <td>Nakuchara (Dumboor Biodiversity Park)</td>
+        <td>Dhalai / Gandacherra</td>
+      </tr>
+      <tr>
+        <td>Sita chara (Tui-chinta) Eco-Park</td>
+        <td>West / Sadar</td>
+      </tr>
+      <tr>
+        <td>Jampui Hill</td>
+        <td>North / Kanchanpur</td>
+      </tr>
+    </tbody>
+  </table>
 
   <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3">
-    </script>
+  </script>
   <script>
     if (document.getElementById("datatable") && typeof simpleDatatables.DataTable !== 'undefined') {
       const dataTable = new simpleDatatables.DataTable("#datatable", {

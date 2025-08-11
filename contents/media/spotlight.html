@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Permissions-Policy" content="encrypted-media=*">
+        <title>Spotlight</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+                tailwind.config = {
+                        theme: {
+                                extend: {
+                                        fontFamily: {
+                                                sans: ['Inter', 'system-ui', 'sans-serif'],
+                                        },
+                                }
+                        }
+                }
+        </script>
+</head>
+
+<body>
+        <div class="max-w-7xl mx-auto p-6 md:p-10 lg:p-8 bg-white shadow-xl rounded-2xl my-2 border border-gray-100">
+                <h1 class="text-4xl font-extrabold  mb-6 border-b-4 border-gray-500 pb-2">Spotlight</h2>
+
+                        <section class="mb-10">
+                                <div id="gallery" class="grid lg:grid-cols-6 sm:grid-cols-2 gap-4">
+                                        <div class="aspect-square overflow-hidden rounded-2xl cursor-pointer"><img
+                                                        src="/media/uploads/spotlight/AI Workshop.jpg"
+                                                        data-full="/media/uploads/spotlight/AI Workshop.jpg"
+                                                        alt="AI Workshop"
+                                                        class="w-full h-full object-cover image-hover">
+                                        </div>
+                                        <div class="aspect-square overflow-hidden rounded-2xl cursor-pointer"><img
+                                                        src="/media/uploads/spotlight/Blood Donation Camp on Biodiversity Day.jpg"
+                                                        data-full="/media/uploads/spotlight/Blood Donation Camp on Biodiversity Day.jpg"
+                                                        alt="Blood Donation Camp on Biodiversity Day"
+                                                        class="w-full h-full object-cover image-hover">
+                                        </div>
+                                        <div class="aspect-square overflow-hidden rounded-2xl cursor-pointer"><img
+                                                        src="/media/uploads/spotlight/International Biological Diversity 2025_Celebration.jpg"
+                                                        data-full="/media/uploads/spotlight/International Biological Diversity 2025_Celebration.jpg"
+                                                        alt="International Biological Diversity 2025_Celebration"
+                                                        class="w-full h-full object-cover image-hover"></div>
+                                        <div class="aspect-square overflow-hidden rounded-2xl cursor-pointer"><img
+                                                        src="/media/uploads/spotlight/International Yoga Day 2025.jpg"
+                                                        data-full="/media/uploads/spotlight/International Yoga Day 2025.jpg"
+                                                        alt="International Yoga Day 2025"
+                                                        class="w-full h-full object-cover image-hover"></div>
+                                        <div class="aspect-square overflow-hidden rounded-2xl cursor-pointer"><img
+                                                        src="/media/uploads/spotlight/JOCV Visit.jpg" alt="JOCV Visit"
+                                                        data-full="/media/uploads/spotlight/JOCV Visit.jpg"
+                                                        alt="JOCV Visit" class="w-full h-full object-cover image-hover">
+                                        </div>
+                                        <div class="aspect-square overflow-hidden rounded-2xl cursor-pointer"><img
+                                                        src="/media/uploads/spotlight/Review Meeting at North.jpg"
+                                                        data-full="/media/uploads/spotlight/Review Meeting at North.jpg"
+                                                        alt="Review Meeting at North"
+                                                        class="w-full h-full object-cover image-hover">
+                                        </div>
+                                        <div class="aspect-square overflow-hidden rounded-2xl cursor-pointer"><img
+                                                        src="/media/uploads/spotlight/Review Meeting at Sepahijala.jpg"
+                                                        src="/media/uploads/spotlight/Review Meeting at Sepahijala.jpg"
+                                                        alt="Review Meeting at Sepahijala"
+                                                        class="w-full h-full object-cover image-hover"></div>
+                                        <div class="aspect-square overflow-hidden rounded-2xl cursor-pointer"><img
+                                                        src="/media/uploads/spotlight/Review Meeting at Unakoti.jpg"
+                                                        data-full="/media/uploads/spotlight/Review Meeting at Unakoti.jpg"
+                                                        alt="Review Meeting at Unakoti"
+                                                        class="w-full h-full object-cover image-hover">
+                                        </div>
+                                        <div class="aspect-square overflow-hidden rounded-2xl cursor-pointer"><img
+                                                        src="/media/uploads/spotlight/Training on fire safety and earthquake evacuation.jpg"
+                                                        data-full="/media/uploads/spotlight/Training on fire safety and earthquake evacuation.jpg"
+                                                        alt="Training on fire safety and earthquake evacuation"
+                                                        class="w-full h-full object-cover image-hover"></div>
+                                        <div class="aspect-square overflow-hidden rounded-2xl cursor-pointer"><img
+                                                        src="/media/uploads/spotlight/Meeting with Nudge Institute.jpg"
+                                                        data-full="/media/uploads/spotlight/Meeting with Nudge Institute.jpg"
+                                                        alt="Meeting with Nudge Institute"
+                                                        class="w-full h-full object-cover image-hover"></div>
+                                        <div class="aspect-square overflow-hidden rounded-2xl cursor-pointer"><img
+                                                        src="/media/uploads/spotlight/Special Jury award for Tripura JICA Project (SCATFORM).jpg"
+                                                        data-full="/media/uploads/spotlight/Special Jury award for Tripura JICA Project (SCATFORM).jpg"
+                                                        alt="Special Jury award for Tripura JICA Project (SCATFORM)"
+                                                        class="w-full h-full object-cover image-hover"></div>
+                                </div>
+                        </section>
+        </div>
+         <!-- Lightbox -->
+        <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 hidden justify-center items-center z-50"><button
+                onclick="closeLightbox()" class="absolute top-6 right-8 text-white text-3xl font-bold">&times;</button>
+            <button onclick="prevImage()"
+                class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-4xl">❮</button>
+            <img id="lightbox-img" alt="Large" class="max-w-full max-h-[80vh] rounded-lg shadow-lg"> <button
+                onclick="nextImage()"
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-4xl">❯</button>
+        </div>
+</body>
+
+</html>

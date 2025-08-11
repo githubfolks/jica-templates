@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecotourism Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <style>
+        .datatable-pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .datatable-pagination-list {
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        .datatable-pagination-list-item-link {
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            color: #374151;
+            background-color: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 0.25rem;
+        }
+
+        .datatable-pagination-list-item-link:hover {
+            background-color: #f3f4f6;
+        }
+
+        td,
+        th {
+            border: 1px solid #929294;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="max-w-7xl mx-auto p-6 md:p-10 lg:p-8 bg-white shadow-xl rounded-2xl my-2 border border-gray-100">
+        <!-- Main Title -->
+        <h1 class="text-4xl font-extrabold  mb-6 border-b-4 border-gray-500 pb-2">
+            ECOTOURISM DEVELOPMENT UNDER TRIPURA JICA PROJECT (SCATFORM)
+        </h1>
+
+        <!-- Introduction -->
+        <section class="mb-10">
+            <p class=" text-justify text-lg mb-4">
+                The Tripura Forest Department (TFD), as the custodian of more than 60% of the state’s geographical area,
+                recognizes the strong interlinkage between nature conservation and ecotourism. Guided by the Tripura
+                Ecotourism Policy (2004), the department envisions the development of ecotourism as a sustainable,
+                equitable, and community-based initiative that improves the living standards of host communities while
+                conserving biodiversity. In alignment with this vision, MoD Component C3.6 of Tripura JICA Project
+                (SCATFORM) integrates ecotourism as a vital element under its Livelihood Development component. It
+                includes the strategic vision, resource allocation, implementation modalities, stakeholder
+                responsibilities, and guidelines for convergence and community involvement.
+            </p>
+            <h2 class="text-2xl md:text-3xl font-bold mb-2 mt-4">
+                Objectives
+            </h2>
+            <h2 class="text-2xl md:text-2xl font-bold mb-2 mt-4">
+                The ecotourism component aims to:
+            </h2>
+            <ul class="ml-10 list-disc">
+
+                <li>
+                    Strengthen the institutional framework for ecotourism development
+                </li>
+                <li>
+                    Promote nature-based and culturally rich tourism
+                </li>
+                <li>
+                    Enhance local community participation and benefit sharing
+                </li>
+                <li>
+                    Upgrade existing ecotourism infrastructure and develop new destinations
+                </li>
+            </ul>
+            <h2 class="text-2xl md:text-3xl font-bold mb-2 mt-4">
+                Key Stakeholders:
+            </h2>
+            <ul class="ml-10 list-disc">
+                <li>
+                    Tripura Forest Department (TFD): Lead agency responsible for planning, regulation, capacity
+                    building, and coordination
+                </li>
+                <li>
+                    Tripura Tourism Department: Technical support, including promotional activities
+                </li>
+                <li>Other Government Departments: Support through convergence with departmental schemes </li>
+                <li>Tourism Industry: Private sector investment, infrastructure development, and service delivery</li>
+                <li>Community Institutions (JFMCs/SHGs/EDCs): Grassroots implementation and benefit maximization.</li>
+            </ul>
+            <h2 class="text-2xl md:text-3xl font-bold mb-2 mt-4">
+                Strategic Interventions
+            </h2>
+            <h2 class="text-2xl md:text-2xl font-bold mb-2 mt-4">
+                1. Macro-Level Interventions:
+            </h2>
+            <ul class="ml-10 list-disc">
+
+                <li>
+                    Review and redrafting of the outdated Tripura Ecotourism Policy
+                </li>
+                <li>
+                    Development of a comprehensive ecotourism vision and strategy
+                </li>
+                <li>
+                    Establishment of an Ecotourism Development Organisation (EDO)
+                </li>
+                <li>
+                    Creation of an Ecotourism Development Fund
+                </li>
+            </ul>
+            <h2 class="text-2xl md:text-2xl font-bold mb-2 mt-4">
+                2. Micro-Level Interventions:
+            </h2>
+            <ul class="ml-10 list-disc">
+
+                <li>
+                    Upgradation of eco parks and existing destinations
+                </li>
+                <li>
+                    Development of new ecotourism destinations through a cluster-based approach
+                </li>
+                <li>
+                    Capacity building, enterprise promotion, and marketing
+                </li>
+            </ul>
+
+            <h2 class="text-2xl md:text-3xl font-bold mb-2 mt-4">
+                Ecotourism Development Organisation (EDO):
+            </h2>
+            <p class="text-justify text-lg mb-4">
+                Tripura Nature Trails and Resorts (TNTR) Ltd., a Public Sector Undertaking under the Tripura Forest
+                Department, has been identified to act as the Ecotourism Development Organisation (EDO) under the
+                SCATFORM Project. Established in 2022, TNTR aims to facilitate sustainable ecotourism growth in Tripura
+                while empowering local communities and preserving ecological balance.
+            </p>
+            <h2 class="text-2xl md:text-3xl font-bold mb-2 mt-4">
+                Ecotourism sites identified for development and upgradation under Tripura SCATFORM Project, implemented
+                by TNTR Ltd. across designated DMUs/SDMUs in Tripura:
+            </h2>
+            <table id="datatable" class="text-gray-800 min-w-full divide-y divide-gray-200">
+                <thead>
+                    <tr>
+                        <th>Type of Ecotourism site</th>
+                        <th>Name of Ecotourism site</th>
+                        <th>District Management Unit (DMU) / Sub-Divisional Management Unit (SDMU)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="3">Upgradation of the Existing Eco-Parks</td>
+                        <td>Rungthang Eco-Park</td>
+                        <td>Sepahijala / Bishalgarh</td>
+                    </tr>
+                    <tr>
+                        <td>Unakoti Eco-Park</td>
+                        <td>Unakoti / Kailashahar</td>
+                    </tr>
+                    <tr>
+                        <td>Banabiti Eco-Park</td>
+                        <td>Khowai / Khowai</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Development of New Ecotourism Destination</td>
+                        <td>Nakuchara (Dumboor Biodiversity Park)</td>
+                        <td>Dhalai / Gandacherra</td>
+                    </tr>
+                    <tr>
+                        <td>Sita chara (Tui-chinta) Eco-Park</td>
+                        <td>West / Sadar</td>
+                    </tr>
+                    <tr>
+                        <td>Jampui Hill</td>
+                        <td>North / Kanchanpur</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 class="text-2xl md:text-2xl font-bold mb-2 mt-4">
+                Role of TNTR as EDO:
+            </h2>
+            <ul class="ml-10 list-disc">
+
+                <li>
+                    Institutionalizing ecotourism through strategic planning and policy support
+                </li>
+                <li>
+                    Managing the Ecotourism Development Fund
+                </li>
+                <li>
+                    Providing technical and enterprise development support to communities
+                </li>
+                <li>
+                    Overseeing ecotourism infrastructure development and promotion
+                </li>
+            </ul>
+            <h2 class="text-2xl md:text-2xl font-bold mb-2 mt-4">
+                Major Activities Envisaged:
+            </h2>
+            <ul class="ml-10 list-disc">
+
+                <li>
+                    Creation of community ecotourism centres and log huts
+                </li>
+                <li>
+                    Development of eco-tour packages and homestay networks
+                </li>
+                <li>
+                    Promotion of community-based enterprises (souvenir, hospitality, guiding, etc.)
+                </li>
+                <li>
+                    Capacity building in hospitality, interpretation, and cultural integration
+                </li>
+                <li>
+                    Participation in national and international tourism fairs
+                </li>
+                <li>
+                    Development of online ecotourism portal and promotional publications
+                </li>
+            </ul>
+            <p class="text-justify text-lg mb-4">
+                Ecotourism under SCATFORM Project is envisioned as a transformative force for biodiversity conservation
+                and rural prosperity in Tripura. With the Tripura Forest Department providing leadership, and TNTR Ltd.
+                acting as the Ecotourism Development Organisation, the Project aims to establish a replicable model of
+                community-led, sustainable tourism that showcases Tripura’s natural and cultural richness while
+                contributing to environmental sustainability and economic resilience.
+            </p>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3">
+    </script>
+    <script>
+        if (document.getElementById("datatable") && typeof simpleDatatables.DataTable !== 'undefined') {
+            const dataTable = new simpleDatatables.DataTable("#datatable", {
+                paging: false,
+                searchable: false,
+                sortable: false
+            });
+        }
+    </script>
+</body>
+
+</html>

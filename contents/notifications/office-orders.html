@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Cost Breakdown</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <style>
+        .datatable-pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .datatable-pagination-list {
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        .datatable-pagination-list-item-link {
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            color: #374151;
+            background-color: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 0.25rem;
+        }
+
+        .datatable-pagination-list-item-link:hover {
+            background-color: #f3f4f6;
+        }
+
+        td,
+        th {
+            border: 1px solid #929294;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="max-w-7xl mx-auto p-6 md:p-10 lg:p-8 bg-white shadow-xl rounded-2xl my-2 border border-gray-100">
+        <!-- Main Title -->
+        <h1 class="text-4xl font-extrabold  mb-6 border-b-4 border-gray-500 pb-2">Office Orders / Circulars</h1>
+        <table id="datatable" class="text-gray-800 min-w-full divide-y divide-gray-200">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>File</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CA Audit schedule for the FY 2024-25</td>
+                    <td><a href="/media/office-orders/CA Audit schedule for the FY 2024-25.pdf" target="_blank"
+                            rel="noopener">View /
+                            Download</a></td>
+
+                </tr>
+                <tr>
+                    <td>Confirmation of target for raising of Agroforestry-July 2025</td>
+                    <td><a href="/media/office-orders/Confirmation of target for raising of Agroforestry-July 2025.pdf"
+                            target="_blank" rel="noopener">View / Download</a></td>
+                </tr>
+
+                <tr>
+                    <td>Dist. Level Review Meeting, Unakoti</td>
+                    <td><a href="/media/office-orders/Dist. Level Review Meeting_Unakoti.pdf" target="_blank"
+                            rel="noopener">View / Download</a></td>
+                </tr>
+                <tr>
+                    <td>DMUs review meeting on 17 May 2025 at 11:30 AM</td>
+                    <td><a href="/media/office-orders/DMUs review meeting on 17 May 2025 at 11_30 AM.pdf"
+                            target="_blank" rel="noopener">View / Download</a></td>
+                </tr>
+                <tr>
+                    <td>Field visit for AGF</td>
+                    <td><a href="/media/office-orders/Field visit for AGF_0001.pdf" target="_blank" rel="noopener">View
+                            / Download</a></td>
+                </tr>
+                <tr>
+                    <td>International Yoga Day Celebration 2025 at PMU on 21st June 2025</td>
+                    <td><a href="/media/office-orders/International Yoga Day Celebration 2025 at PMU on 21st June 2025.pdf"
+                            target="_blank" rel="noopener">View / Download</a></td>
+                </tr>
+
+                <tr>
+                    <td>Meeting notice for discussion with PMC</td>
+                    <td><a href="/media/office-orders/Meeting notice for discussion with PMC.pdf" target="_blank"
+                            rel="noopener">View / Download</a></td>
+                </tr>
+                <tr>
+                    <td>Meeting Notice with bank</td>
+                    <td><a href="/media/office-orders/Meeting Notice with bank.pdf" target="_blank" rel="noopener">View
+                            / Download</a></td>
+                </tr>
+                <tr>
+                    <td>Meeting notice HEC</td>
+                    <td><a href="/media/office-orders/Meeting notice_HEC.pdf" target="_blank" rel="noopener">View /
+                            Download</a></td>
+                </tr>
+                <tr>
+                    <td>Office Notice Training AI</td>
+                    <td><a href="/media/office-orders/Office Notice_Training_AI.pdf" target="_blank" rel="noopener">View
+                            /
+                            Download</a></td>
+                </tr>
+                <tr>
+                    <td>Office Order FIGS</td>
+                    <td><a href="/media/office-orders/Office Order_FIGS.pdf" target="_blank" rel="noopener">View /
+                            Download</a></td>
+                </tr>
+                <tr>
+                    <td>Review Meeting North 02-08-2025</td>
+                    <td><a href="/media/office-orders/Review Meeting_North_02-08-2025.pdf" target="_blank"
+                            rel="noopener">View / Download</a></td>
+                </tr>
+                <tr>
+                    <td>Sepahijala District Review meeting</td>
+                    <td><a href="/media/office-orders/Sepahijala District Review meeting.pdf" target="_blank"
+                            rel="noopener">View / Download</a></td>
+                </tr>
+                <tr>
+                    <td>Tender Opening & Evaluation Committee Agroforestry</td>
+                    <td><a href="/media/office-orders/Tender Opening & Evaluation Committee Agroforestry.pdf"
+                            target="_blank" rel="noopener">View / Download</a></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3">
+    </script>
+    <script>
+        if (document.getElementById("datatable") && typeof simpleDatatables.DataTable !== 'undefined') {
+            const dataTable = new simpleDatatables.DataTable("#datatable", {
+                paging: true,
+                searchable: false,
+                sortable: false
+            });
+        }
+    </script>
+</body>
+
+</html>
