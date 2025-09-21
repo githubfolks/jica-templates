@@ -731,6 +731,12 @@
                             <p class="text-center">Tripura</p>
                         </div>
 
+                        <div class="grid items-center justify-center mx-auto mb-4">
+                            <img src="images/president.jpg" class="rounded-2xl w-[180px] h-[212px]">
+                            <p class="text-center">Dr. TANAKA Akihiko,</p>
+                            <p class="text-center">President, JICA</p>
+                        </div>
+
                     </div>
                     <!-- Content -->
                     <div class="space-y-2 max-w-xl w-full">
@@ -744,6 +750,7 @@
                             natural
                             resource sector in the country.
                         </p>
+                         <p class="lg:py-8">&nbsp;</p>
                         <span class="text-xl font-bold">About JICA (Donor Agency)</span>
                         <p class="text-justify items-center justify-center">
                             The Japan International Cooperation Agency (JICA) is a Governmental
@@ -767,6 +774,12 @@
                             <h3 class="font-semibold mb-2 text-center">Shri Animesh Debbarma</h3>
                             <p class="text-center">Hon'ble Forest Minister,</p>
                             <p class="text-center">Government of Tripura</p>
+                        </div>
+                        <div class="grid items-center justify-center mx-auto mb-4"><img src="images/cr_jica.jpg"
+                                class="rounded-2xl w-[180px] h-[212px]">
+                            <p class="text-center">Mr. TAKEUCHI Takuro,</p>
+                            <p class="text-center">Chief Representative,</p>
+                            <p class="text-center">JICA India</p>
                         </div>
                     </div>
                 </div>
@@ -825,7 +838,8 @@
                                     </ul>
 
                                     <!-- Tab Content -->
-                                    <div class="mt-4 h-64 overflow-y-auto border border-gray-300 rounded-lg bg-white p-4">
+                                    <div
+                                        class="mt-4 h-64 overflow-y-auto border border-gray-300 rounded-lg bg-white p-4">
                                         <div id="content-1" class="block">
                                             <div x-data x-init="$nextTick(()=>{})" class="scroll-wrapper">
                                                 <div class="scroll-content">
@@ -1033,67 +1047,241 @@
         </section>
 
         <!-- Gallery Section -->
-
-        <section id="youtube" class="py-10">
+        <section id="gallery" class="py-10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <div class="bg-stone-50 p-6 rounded-2xl items-center justify-center">
-                        <h2 class="text-xl sm:text-xl font-bold mb-4 text-center">Tripura JICA on Youtube</h2>
-                        <div class="flex flex-wrap lg:flex-col-3 md:flex-col-3 gap-6 items-center justify-center">
-                            <div class="bg-white shadow-md rounded-lg">
-                                <div class="aspect-w-16 aspect-h-9"><iframe
-                                        src="https://www.youtube.com/embed/hKsdL8hY8FU" title="YouTube video player"
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen="allowfullscreen">
-                                    </iframe></div>
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl sm:text-2xl font-bold mb-4">
+                        Our Gallery
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
+                    <div class="aspect-square overflow-hidden rounded-2xl cursor-pointer">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Gallery image 1" class="w-full h-full object-cover image-hover">
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded-2xl cursor-pointer">
+                        <img src="https://images.pexels.com/photos/3184295/pexels-photo-3184295.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Gallery image 2" class="w-full h-full object-cover image-hover">
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded-2xl cursor-pointer">
+                        <img src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Gallery image 3" class="w-full h-full object-cover image-hover">
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded-2xl cursor-pointer">
+                        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Gallery image 4" class="w-full h-full object-cover image-hover">
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded-2xl cursor-pointer">
+                        <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Gallery image 5" class="w-full h-full object-cover image-hover">
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded-2xl cursor-pointer">
+                        <img src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Gallery image 6" class="w-full h-full object-cover image-hover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Youtube Section -->
+        <section id="youtube" class="py-10 bg-stone-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl sm:text-2xl font-bold mb-4">
+                        Tripura JICA on YouTube
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h2 class="font-semibold text-lg text-gray-800">Video Title</h2>
+                            <p class="text-sm text-gray-600 mt-1">Short description of the video content.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h2 class="font-semibold text-lg text-gray-800">Video Title</h2>
+                            <p class="text-sm text-gray-600 mt-1">Short description of the video content.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h2 class="font-semibold text-lg text-gray-800">Video Title</h2>
+                            <p class="text-sm text-gray-600 mt-1">Short description of the video content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section id="social" class="py-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                        <div class="bg-stone-50 p-6 rounded-2xl items-center justify-center">
+                            <h2 class="text-xl sm:text-xl font-bold mb-4">
+                                Tripura JICA on Facebook
+                            </h2>
+                            <div class="rounded-lg overflow-hidden mb-4">
+                                <iframe
+                                    src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTripuraJICAProject%2Fposts%2Fpfbid025f7qs5C1ZfHTR8VW2KMSyLwANWTDa9nxSSELvvHqGHtcc6sDxg4rKf8MdVSmwa4tl&show_text=true&width=500"
+                                    width="530" height="700" style="border:none;overflow:hidden" scrolling="no"
+                                    frameborder="0" allowfullscreen="true"
+                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                             </div>
-                            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                                <div class="aspect-w-16 aspect-h-9"><iframe
-                                        src="https://www.youtube.com/embed/Mue2k5t3-s" title="YouTube video player"
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen="allowfullscreen">
-                                    </iframe></div>
-                            </div>
-                            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                                <div class="aspect-w-16 aspect-h-9"><iframe
-                                        src="https://www.youtube.com/embed/kWuQk09uPpw" title="YouTube video player"
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen="allowfullscreen">
-                                    </iframe></div>
-                            </div>
-                            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                                <div class="aspect-w-16 aspect-h-9"><iframe
-                                        src="https://www.youtube.com/embed/R5hPqMG3-lg" title="YouTube video player"
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen="allowfullscreen">
-                                    </iframe></div>
-                            </div>
-                            <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                                <div class="aspect-w-16 aspect-h-9"><iframe
-                                        src="https://www.youtube.com/embed/HvEca0FcGVs" title="YouTube video player"
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen="allowfullscreen">
-                                    </iframe></div>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                        <div class="bg-stone-50 p-6 rounded-2xl items-center justify-center">
+                            <h2 class="text-xl sm:text-xl font-bold mb-4">
+                                Tripura JICA on Twitter
+                            </h2>
+                            <div class="rounded-lg overflow-hidden mb-4">
+                                <blockquote class="twitter-tweet">
+                                    <a href="https://twitter.com/JicaTripura/status/1890349126228832669"></a>
+                                </blockquote>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!--External Links-->
 
+        <section id="external-link" class="py-4 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <section class="bg-gray-100 py-10 px-4">
+                        <div class="max-w-7xl mx-auto">
+                            <!-- Swiper Container -->
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="https://moef.gov.in/" target="_blank">
+                                            <img src="images/external-link-images/1.png" class="rounded-2xl"
+                                                alt="Slide 1">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="https://tfdpc.tripura.gov.in/" target="_blank">
+                                            <img src="images/external-link-images/2.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="https://biodiversity.tripura.gov.in/"
+                                            target="_blank">
+                                            <img src="images/external-link-images/3.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="https://ifs.nic.in/" target="_blank">
+                                            <img src="images/external-link-images/4.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="https://www.ignfa.gov.in/" target="_blank">
+                                            <img src="images/external-link-images/5.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="http://www.icfre.gov.in/" target="_blank">
+                                            <img src="images/external-link-images/6.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="https://eprocure.gov.in/eprocure/app"
+                                            target="_blank">
+                                            <img src="images/external-link-images/7.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="https://gem.gov.in/" target="_blank">
+                                            <img src="images/external-link-images/8.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="https://eauction.gov.in/eAuction/app"
+                                            target="_blank">
+                                            <img src="images/external-link-images/9.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="https://igod.gov.in/" target="_blank">
+                                            <img src="images/external-link-images/10.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="https://jica.tripura.gov.in/" target="_blank">
+                                            <img src="images/external-link-images/11.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="https://www.india.gov.in/" target="_blank">
+                                            <img src="images/external-link-images/12.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="https://edistrict.tripura.gov.in/"
+                                            target="_blank">
+                                            <img src="images/external-link-images/13.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="https://wii.gov.in/" target="_blank">
+                                            <img src="images/external-link-images/14.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="https://fsi.nic.in/" target="_blank">
+                                            <img src="images/external-link-images/15.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="https://iifm.ac.in/" target="_blank">
+                                            <img src="images/external-link-images/16.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="https://tspcb.tripura.gov.in/" target="_blank">
+                                            <img src="images/external-link-images/17.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="https://www.mygov.in/" target="_blank">
+                                            <img src="images/external-link-images/18.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="http://bhuvan-noeda.nrsc.gov.in/projects/moef/"
+                                            target="_blank">
+                                            <img src="images/external-link-images/19.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                    <div class="swiper-slide"><a href="https://tripura.gov.in/" target="_blank">
+                                            <img src="images/external-link-images/20.png" class="rounded-2xl"
+                                                alt="Slide 2"></a>
+                                    </div>
+                                </div>
+
+                                <!-- Navigation buttons -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </section>
+
         <!-- project section -->
-        <section id="project" class="py-10">
+        <section id="project" class="py-10 bg-stone-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
                     <div class="text-center">
-                        <div class="bg-stone-300 p-6 text-gray-900 rounded-2xl card-hover items-center justify-center">
-                            <p class="text-xl sm:text-sm font-bold mb-4">Project Duration</p>
+                        <div class="bg-blue-300 p-6 text-gray-900 rounded-2xl card-hover items-center justify-center">
+                            <p class="text-xl sm:text-sm font-bold mb-4">
+                                Project Duration
+                            </p>
                             <div class="flex-1 mb-4 text-sm">
                                 <p>10 Years</p>
                                 <p>(FY: 2018-19 to 2028-29)</p>
@@ -1101,8 +1289,10 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <div class="bg-stone-300 p-6 text-gray-900 rounded-2xl card-hover items-center justify-center">
-                            <p class="text-xl sm:text-sm font-bold mb-4">Project Cost</p>
+                        <div class="bg-blue-300 p-6 text-gray-900 rounded-2xl card-hover items-center justify-center">
+                            <p class="text-xl sm:text-sm font-bold mb-4">
+                                Project Cost
+                            </p>
                             <div class="flex-1 mb-4 text-sm">
                                 <p>Rs. 998 Crores</p>
                                 <p>(approx)</p>
@@ -1110,8 +1300,10 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <div class="bg-stone-300 p-6 text-gray-900 rounded-2xl card-hover items-center justify-center">
-                            <p class="text-xl sm:text-sm font-bold mb-4">JFMC / EDC</p>
+                        <div class="bg-blue-300 p-6 text-gray-900 rounded-2xl card-hover items-center justify-center">
+                            <p class="text-xl sm:text-sm font-bold mb-4">
+                                JFMC / EDC
+                            </p>
                             <div class="flex-1 mb-4 text-sm">
                                 <p>456 / 450</p>
                                 <p>(Formed / Target)</p>
@@ -1119,8 +1311,10 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <div class="bg-stone-300 p-6 text-gray-900 rounded-2xl card-hover items-center justify-center">
-                            <p class="text-xl sm:text-sm font-bold mb-4">Approved Microplans</p>
+                        <div class="bg-blue-300 p-6 text-gray-900 rounded-2xl card-hover items-center justify-center">
+                            <p class="text-xl sm:text-sm font-bold mb-4">
+                                Approved Microplans
+                            </p>
                             <div class="flex-1 mb-4 text-sm">
                                 <p>456 / 456</p>
                                 <p>(Approved / Target)</p>
@@ -1128,8 +1322,10 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <div class="bg-stone-300 p-6 text-gray-900 rounded-2xl card-hover items-center justify-center">
-                            <p class="text-sm sm:text-sm font-bold mb-4">Self Help Group (SHG)</p>
+                        <div class="bg-blue-300 p-6 text-gray-900 rounded-2xl card-hover items-center justify-center">
+                            <p class="text-sm sm:text-sm font-bold mb-4">
+                                Self Help Group (SHG)
+                            </p>
                             <div class="flex-1 mb-4 text-sm">
                                 <p>1350 /1350</p>
                                 <p>(Formed / Target)</p>
